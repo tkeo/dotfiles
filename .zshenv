@@ -6,6 +6,7 @@ alias po=popd
 alias ll='ls -l'
 alias la='ls -A'
 alias lh='ls -lh'
+alias lsa='ls -ld .*'
 
 alias -g L='| less'
 alias -g G='| grep'
