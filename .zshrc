@@ -12,6 +12,20 @@ limit -s
 
 umask 022
 
+ruby_version() {
+  if [ $RUBY_VERSION ]; then
+    echo $RUBY_VERSION
+  else
+    type rbenv > /dev/null && echo `rbenv version | sed -e "s/ (.*$//"`
+  fi
+}
+
+ruby_info() {
+  if [ -n "$(ruby_version)" ]; then
+    echo "%{$fg[yellow]%}[$(ruby_version)]%{$reset_color%}"
+  fi
+}
+
 git_status() {
   if [ -n "$(current_branch)" ]; then
     echo "%{$fg[red]%}[$(current_branch)]%{$reset_color%}"
@@ -25,7 +39,7 @@ function current_branch() {
 }
 
 PROMPT=' %{%(?.$fg[green].$fg[red])%}$%{$reset_color%} '
-RPROMPT='%~ $(git_status)%{$fg[yellow]%}[`rbenv version | sed -e "s/ (.*$//"`]%{$reset_color%} '
+RPROMPT='%~ $(git_status)$(ruby_info) '
 
 bindkey -e
 bindkey ' ' magic-space
