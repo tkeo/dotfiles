@@ -16,7 +16,7 @@ ruby_version() {
   if [ $RUBY_VERSION ]; then
     echo $RUBY_VERSION
   else
-    type rbenv > /dev/null && echo `rbenv version | sed -e "s/ (.*$//"`
+    type rbenv > /dev/null && echo `rbenv version-name`
   fi
 }
 
