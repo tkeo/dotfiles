@@ -26,20 +26,8 @@ ruby_info() {
   fi
 }
 
-git_status() {
-  if [ -n "$(current_branch)" ]; then
-    echo "%{$fg[red]%}[$(current_branch)]%{$reset_color%}"
-  fi
-}
-
-# from oh-my-zsh/plugins/git/git.plugin.zsh
-function current_branch() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo ${ref#refs/heads/}
-}
-
 PROMPT=' %{%(?.$fg[green].$fg[red])%}$%{$reset_color%} '
-RPROMPT='%~ $(git_status)$(ruby_info) '
+RPROMPT='%~ %{$fg[red]%}$(__git_ps1)%{$reset_color%}$(ruby_info) '
 
 bindkey -e
 bindkey ' ' magic-space
@@ -66,6 +54,8 @@ setenv() { export $1=$2 }
 chpwd() {
   ls
 }
+
+. ~/.git-prompt.sh
 
 if [ -f ~/.zshrc.local ]; then
   . ~/.zshrc.local
