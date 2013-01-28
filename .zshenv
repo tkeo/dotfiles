@@ -15,11 +15,10 @@ alias -g C='| pbcopy'
 alias -g V='| vi -'
 
 alias be='bundle exec'
-alias rake='be rake'
-alias r='be rails'
+alias r='rails'
+alias z='zeus'
 alias s='r s'
 alias c='r c'
-alias cap='be cap'
 
 case $OSTYPE in
 darwin*)
