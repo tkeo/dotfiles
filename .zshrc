@@ -49,6 +49,14 @@ setopt transient_rprompt prompt_subst
 
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 
+case "${TERM}" in
+xterm*)
+  precmd() {
+    echo -ne "\033]0;${HOST%%.*}:${PWD}\007"
+  }
+  ;;
+esac
+
 setenv() { export $1=$2 }
 
 chpwd() {
