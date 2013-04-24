@@ -1,8 +1,8 @@
 *~
 *#
+.#*
 *.swp
 *.bak
 .svn
 .DS_Store
-.rbenv-version
 .ruby-version
