@@ -1,0 +1,37 @@
+[color]
+	ui = auto
+[alias]
+	st = status
+	co = checkout
+	ci = commit -v
+	br = branch
+	bro = browse-remote
+	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
+[core]
+	excludesfile = ~/.gitignore_global
+[merge]
+	keepBackup = false;
+	tool = p4merge
+	ff = false
+[mergetool "p4merge"]
+	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+	keepTemporaries = false
+	trustExitCode = false
+	keepBackup = false
+[pull]
+	rebase = true
+[push]
+	default = simple
+[browse-remote "github.com"]
+	top = https://{host}/{path}
+	ref = https://{host}/{path}/tree/{short_ref}
+	rev = https://{host}/{path}/commit/{commit}
+	file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
+[tig "bind"]
+	generic = g move-first-line
+	generic = G move-last-line
+	main = o !git browse-remote %(commit)
+	diff = o !git browse-remote %(commit)
+	log = o !git browse-remote %(commit)
+[include]
+	path = .gitconfig.local
