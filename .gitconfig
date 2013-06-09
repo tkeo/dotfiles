@@ -7,6 +7,7 @@
 	br = branch
 	bro = browse-remote
 	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
+	# git-flow
 	ffs = flow feature start
 	ffp = flow feature publish
 [core]
@@ -25,6 +26,7 @@
 [push]
 	default = simple
 [browse-remote "github.com"]
+	# gem install git-browse-remote
 	top = https://{host}/{path}
 	ref = https://{host}/{path}/tree/{short_ref}
 	rev = https://{host}/{path}/commit/{commit}
