@@ -36,4 +36,4 @@
 	diff = o !git browse-remote %(commit)
 	log = o !git browse-remote %(commit)
 [include]
-	path = .gitconfig.local
+	path = ~/.gitconfig.local
