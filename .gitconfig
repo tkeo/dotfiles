@@ -10,10 +10,13 @@
 	# git-flow
 	ffs = flow feature start
 	ffp = flow feature publish
+	fff = flow feature finish -k
+	fhs = flow hotfix start
+	fhf = flow hotfix finish -k
 [core]
 	excludesfile = ~/.gitignore_global
 [merge]
-	keepBackup = false;
+	keepBackup = false
 	tool = p4merge
 	ff = false
 [mergetool "p4merge"]
