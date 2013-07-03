@@ -4,7 +4,7 @@
 	st = status
 	co = checkout
 	ci = commit -v
-	br = branch
+	br = branch -v
 	bro = browse-remote
 	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
 	# git-flow

@@ -15,10 +15,9 @@ alias -g C='| pbcopy'
 alias -g V='| vi -'
 
 alias be='bundle exec'
-alias r='rails'
-alias z='zeus'
-alias s='r s'
-alias c='r c'
+alias sp='spring'
+alias s='be rails s'
+alias c='sp rails c'
 
 case $OSTYPE in
 darwin*)
