@@ -4,8 +4,9 @@
 	st = status
 	co = checkout
 	ci = commit -v
-	br = branch -v
+	br = branch
 	bro = browse-remote
+	pu = pull -p
 	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
 	# git-flow
 	ffs = flow feature start
@@ -15,6 +16,8 @@
 	fhf = flow hotfix finish -k
 [core]
 	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes_global
+	precomposeunicode = true
 [merge]
 	keepBackup = false
 	tool = p4merge
@@ -40,5 +43,9 @@
 	main = o !git browse-remote %(commit)
 	diff = o !git browse-remote %(commit)
 	log = o !git browse-remote %(commit)
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
 [include]
 	path = ~/.gitconfig.local
