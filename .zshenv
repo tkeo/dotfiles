@@ -34,6 +34,12 @@ export PAGER=less
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=ja_JP.UTF-8
 
+if [ -d /usr/local/share/chruby ]; then
+  source /usr/local/share/chruby/chruby.sh
+  source /usr/local/share/chruby/auto.sh
+  chruby 2.0
+fi
+
 if [ -f ~/.zshenv.local ]; then
   . ~/.zshenv.local
 fi
