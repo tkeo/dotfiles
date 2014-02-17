@@ -26,7 +26,7 @@ ruby_info() {
   fi
 }
 
-PROMPT=' %{%(?.$fg[green].$fg[red])%}$%{$reset_color%} '
+PROMPT='`whoami`@`hostname`%{%(?.$fg[green].$fg[red])%}$%{$reset_color%} '
 RPROMPT='%~ %{$fg[red]%}$(__git_ps1)%{$reset_color%}$(ruby_info) '
 
 bindkey -e
