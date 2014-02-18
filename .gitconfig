@@ -37,12 +37,18 @@
 	ref = https://{host}/{path}/tree/{short_ref}
 	rev = https://{host}/{path}/commit/{commit}
 	file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
+[tig]
+	vertical-split = true
+	show-id = true
+	ignore-space = all
+	diff-options = -m --first-parent
 [tig "bind"]
 	generic = g move-first-line
 	generic = G move-last-line
-	main = o !git browse-remote %(commit)
-	diff = o !git browse-remote %(commit)
-	log = o !git browse-remote %(commit)
+	main = o !@git browse-remote %(commit)
+	diff = o !@git browse-remote %(commit)
+	log = o !@git browse-remote %(commit)
+	branch = d !?git branch -d %(branch)
 [pager]
 	log = diff-highlight | less
 	show = diff-highlight | less
