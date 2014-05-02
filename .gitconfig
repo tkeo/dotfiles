@@ -37,11 +37,15 @@
 	ref = https://{host}/{path}/tree/{short_ref}
 	rev = https://{host}/{path}/commit/{commit}
 	file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
+[browse-remote "bitbucket.org"]
+	top = https://{host}/{path}
+	ref = https://{host}/{path}/src/{short_ref}
+	rev = https://{host}/{path}/commits/{commit}
+	file = "https://{host}/{path}/src/{short_rev}/{file}{line && \"#L%d\" % line}"
 [tig]
 	vertical-split = true
 	show-id = true
 	ignore-space = all
-	diff-options = -m --first-parent
 [tig "bind"]
 	generic = g move-first-line
 	generic = G move-last-line
