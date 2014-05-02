@@ -41,6 +41,10 @@ if [ -d /usr/local/share/chruby ]; then
   chruby 2.1
 fi
 
+if type direnv > /dev/null; then
+  eval "$(direnv hook $0)"
+fi
+
 if [ -f ~/.zshenv.local ]; then
   . ~/.zshenv.local
 fi
