@@ -33,7 +33,7 @@ export EDITOR=vi
 export PAGER=less
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=ja_JP.UTF-8
-export BUNDLER_EDITOR=subl
+export BUNDLER_EDITOR=atom
 
 if [ -d /usr/local/share/chruby ]; then
   source /usr/local/share/chruby/chruby.sh
