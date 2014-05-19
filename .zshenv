@@ -16,8 +16,8 @@ alias -g V='| vi -'
 
 alias be='bundle exec'
 alias sp='spring'
-alias s='be rails s'
-alias c='sp rails c'
+alias s='rails s'
+alias c='rails c'
 
 case $OSTYPE in
 darwin*)
