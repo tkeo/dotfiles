@@ -1,0 +1,13 @@
+set ignore-space = all
+
+set blame-view = date:default author:full id:yes,color text
+set grep-view = file-name:yes line-number:yes,interval=1 text
+set tree-view = mode author:full file-size:units date:default id:no file-name
+set pager-view = line-number:yes,interval=10 text
+
+bind generic g move-first-line
+bind generic G move-last-line
+bind main o !@git browse-remote %(commit)
+bind diff o !@git browse-remote %(commit)
+bind log o !@git browse-remote %(commit)
+bind branch d !?git branch -d %(branch)

@@ -42,17 +42,6 @@
 	ref = https://{host}/{path}/src/{short_ref}
 	rev = https://{host}/{path}/commits/{commit}
 	file = "https://{host}/{path}/src/{short_rev}/{file}{line && \"#L%d\" % line}"
-[tig]
-	vertical-split = true
-	show-id = true
-	ignore-space = all
-[tig "bind"]
-	generic = g move-first-line
-	generic = G move-last-line
-	main = o !@git browse-remote %(commit)
-	diff = o !@git browse-remote %(commit)
-	log = o !@git browse-remote %(commit)
-	branch = d !?git branch -d %(branch)
 [pager]
 	log = diff-highlight | less
 	show = diff-highlight | less
