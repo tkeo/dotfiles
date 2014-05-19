@@ -63,6 +63,8 @@ chpwd() {
   ls
 }
 
+mcd() { mkdir $1 && cd $1 }
+
 . ~/.git-prompt.sh
 
 if [ -f ~/.zshrc.local ]; then
