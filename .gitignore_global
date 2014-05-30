@@ -6,3 +6,4 @@
 .svn
 .DS_Store
 .ruby-version
+vendor/bundle
