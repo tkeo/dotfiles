@@ -64,7 +64,7 @@ chpwd() {
 
 mcd() { mkdir $1 && cd $1 }
 
-. ~/.git-prompt.sh
+. /usr/local/etc/bash_completion.d/git-prompt.sh
 
 if [ -f ~/.zshrc.local ]; then
   . ~/.zshrc.local
