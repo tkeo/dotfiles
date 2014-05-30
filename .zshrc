@@ -38,7 +38,6 @@ setopt correct correct_all
 setopt auto_list always_last_prompt list_types
 setopt rec_exact auto_remove_slash no_auto_param_slash magic_equal_subst
 setopt auto_pushd pushd_to_home pushd_silent pushd_minus pushd_ignore_dups
-setopt auto_cd cdable_vars
 setopt globdots extended_glob equals rc_quotes
 setopt extended_history share_history append_history hist_ignore_dups bang_hist
 setopt hist_ignore_space
