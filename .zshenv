@@ -2,6 +2,7 @@ alias mv='nocorrect mv'
 alias cp='nocorrect cp'
 alias mkdir='nocorrect mkdir'
 alias bundle='nocorrect bundle'
+alias rspec='nocorrect rspec'
 alias po=popd
 alias ll='ls -l'
 alias la='ls -A'
@@ -15,9 +16,11 @@ alias -g C='| pbcopy'
 alias -g V='| vi -'
 
 alias be='bundle exec'
-alias sp='spring'
+alias bo='bundle open'
 alias s='rails s'
 alias c='rails c'
+alias di='git diff'
+alias st='git status'
 
 case $OSTYPE in
 darwin*)
