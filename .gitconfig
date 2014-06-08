@@ -8,12 +8,6 @@
 	bro = browse-remote
 	pu = pull -p
 	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
-	# git-flow
-	ffs = flow feature start
-	ffp = flow feature publish
-	fff = flow feature finish -k
-	fhs = flow hotfix start
-	fhf = flow hotfix finish -k
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
