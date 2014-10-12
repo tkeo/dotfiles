@@ -40,5 +40,7 @@
 	log = diff-highlight | less
 	show = diff-highlight | less
 	diff = diff-highlight | less
+[diff]
+	renames = true
 [include]
 	path = ~/.gitconfig.local
