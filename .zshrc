@@ -64,6 +64,16 @@ chpwd() {
 
 mcd() { mkdir $1 && cd $1 }
 
+function peco-bundle-open() {
+    bundle open $(bundle list | grep '*' | peco | awk '{ print $2 }')
+}
+function peco-gem-edit() {
+    gem edit $(gem list | grep -v '*' | peco | awk '{ print $1 }')
+}
+function peco-gem-search() {
+    open "https://rubygems.org/gems/$(gem search $1 | grep -v '*' | peco | awk '{ print $1 }')"
+}
+
 . /usr/local/etc/bash_completion.d/git-prompt.sh
 
 if [ -f ~/.zshrc.local ]; then

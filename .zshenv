@@ -15,6 +15,7 @@ alias -g G='| grep'
 alias -g T='| tail'
 alias -g C='| pbcopy'
 alias -g V='| vi -'
+alias -g P='| peco'
 
 alias be='bundle exec'
 alias bo='bundle open'
@@ -23,6 +24,8 @@ alias c='rails c'
 alias rs='rspec'
 alias di='git diff'
 alias st='git status'
+alias pbo=peco-bundle-open
+alias rrp='rake routes | peco'
 
 case $OSTYPE in
 darwin*)
