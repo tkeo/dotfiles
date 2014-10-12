@@ -8,3 +8,8 @@
 .ruby-version
 vendor/bundle
 .envrc
+gems.tags
+TAGS
+GTAGS
+GRTAGS
+GPATH
