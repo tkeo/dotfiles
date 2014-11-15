@@ -73,6 +73,9 @@ function peco-gem-edit() {
 function peco-gem-search() {
     open "https://rubygems.org/gems/$(gem search $1 | grep -v '*' | peco | awk '{ print $1 }')"
 }
+function peco-ghq() {
+    cd $(ghq list -p | peco)
+}
 
 . /usr/local/etc/bash_completion.d/git-prompt.sh
 
