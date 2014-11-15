@@ -43,11 +43,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export LANG=ja_JP.UTF-8
 export BUNDLER_EDITOR=atom
 
-if [ -d /usr/local/share/chruby ]; then
-  source /usr/local/share/chruby/chruby.sh
-  source /usr/local/share/chruby/auto.sh
-  chruby 2.1
-fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 if type direnv > /dev/null; then
   eval "$(direnv hook $0)"
