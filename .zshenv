@@ -39,15 +39,18 @@ esac
 
 export EDITOR=vi
 export PAGER=less
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 export LANG=ja_JP.UTF-8
 export BUNDLER_EDITOR=atom
+export GOPATH=$HOME/.go
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 if type direnv > /dev/null; then
   eval "$(direnv hook $0)"
 fi
+
+export PATH=$HOME/bin:$GOPATH/bin:$PATH
 
 if [ -f ~/.zshenv.local ]; then
   . ~/.zshenv.local
