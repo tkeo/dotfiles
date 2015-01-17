@@ -4,6 +4,7 @@ alias mkdir='nocorrect mkdir'
 alias bundle='nocorrect bundle'
 alias cap='nocorrect cap'
 alias spring='nocorrect spring'
+alias rake='nocorrect noglob rake'
 alias po=popd
 alias ll='ls -l'
 alias la='ls -A'
