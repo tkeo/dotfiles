@@ -34,17 +34,41 @@ bindkey ' ' magic-space
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
 
-setopt correct correct_all
-setopt auto_list always_last_prompt list_types
-setopt rec_exact auto_remove_slash no_auto_param_slash magic_equal_subst
-setopt auto_pushd pushd_to_home pushd_silent pushd_minus pushd_ignore_dups
-setopt globdots extended_glob equals rc_quotes
-setopt extended_history share_history append_history hist_ignore_dups bang_hist
+setopt always_last_prompt
+setopt append_history
+setopt auto_list
+setopt auto_pushd
+setopt auto_remove_slash
+setopt auto_resume
+setopt bang_hist
+setopt correct
+setopt correct_all
+setopt equals
+setopt extended_glob
+setopt extended_history
+setopt globdots
+setopt hist_ignore_dups
 setopt hist_ignore_space
-setopt notify long_list_jobs auto_resume no_bg_nice
-setopt no_beep no_clobber no_prompt_cr rm_star_silent
+setopt list_types
+setopt long_list_jobs
+setopt magic_equal_subst
+setopt no_auto_param_slash
+setopt no_beep
+setopt no_bg_nice
 setopt no_checkjobs
-setopt transient_rprompt prompt_subst
+setopt no_clobber
+setopt no_prompt_cr
+setopt notify
+setopt prompt_subst
+setopt pushd_ignore_dups
+setopt pushd_minus
+setopt pushd_silent
+setopt pushd_to_home
+setopt rc_quotes
+setopt rec_exact
+setopt rm_star_silent
+setopt share_history
+setopt transient_rprompt
 
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 
