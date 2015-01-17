@@ -101,6 +101,17 @@ function peco-ghq() {
     cd $(ghq list -p | peco)
 }
 
+# http://qiita.com/karupanerura/items/65e476755f6348553144
+function SELECT () {
+    mysql -e "SELECT $*"
+}
+function SHOW () {
+    mysql -e "SHOW $*"
+}
+
+alias SELECT="noglob SELECT"
+alias SHOW="noglob SHOW"
+
 . /usr/local/etc/bash_completion.d/git-prompt.sh
 
 if [ -f ~/.zshrc.local ]; then
