@@ -7,6 +7,7 @@
 	br = branch
 	bro = browse-remote
 	pu = pull -p
+	ph = push origin HEAD
 	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
 [core]
 	excludesfile = ~/.gitignore_global
