@@ -1,5 +1,3 @@
-[color]
-	ui = auto
 [alias]
 	st = status
 	co = checkout
@@ -8,24 +6,45 @@
 	bro = browse-remote
 	pu = pull -p
 	ph = push origin HEAD
-	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
+	di = diff -b
+	ds = diff --staged -b
+[color]
+	ui = auto
 [core]
-	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
 	precomposeunicode = true
+	pager =
+[diff]
+	renames = true
+	indentHeuristic = true
+[include]
+	path = ~/.gitconfig.local
+[init]
+	templatedir = ~/.git-templates/git-secrets
 [merge]
 	keepBackup = false
-	tool = p4merge
 	ff = false
-[mergetool "p4merge"]
-	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-	keepTemporaries = false
-	trustExitCode = false
-	keepBackup = false
+	conflictstyle = diff3
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
 [pull]
 	rebase = true
 [push]
 	default = simple
+[rebase]
+	autostash = true
+[stash]
+	showPatch = true
+[secrets]
+	providers = git secrets --aws-provider
+	patterns = [A-Z0-9]{20}
+	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+	allowed = AKIAIOSFODNN7EXAMPLE
+	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
 [browse-remote "github.com"]
 	# gem install git-browse-remote
 	top = https://{host}/{path}
@@ -37,11 +56,3 @@
 	ref = https://{host}/{path}/src/{short_ref}
 	rev = https://{host}/{path}/commits/{commit}
 	file = "https://{host}/{path}/src/{short_rev}/{file}{line && \"#L%d\" % line}"
-[pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
-[diff]
-	renames = true
-[include]
-	path = ~/.gitconfig.local
