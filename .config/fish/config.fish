@@ -18,6 +18,7 @@ export LANG=ja_JP.UTF-8
 export LESS='-i -M -R -W'
 export PAGER=less
 export GEMSRC_USE_GHQ=1
+export GOPATH=$HOME/go
 
 set -gx PATH /usr/local/bin /usr/sbin $PATH
 set -gx PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
