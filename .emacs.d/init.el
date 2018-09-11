@@ -260,6 +260,13 @@
   :bind (("C-a" . mwim-beginning-of-code-or-line)
 	 ("C-e" . mwim-end-of-code-or-line)))
 
+(use-package neotree
+  :init
+  (setq neo-theme 'ascii)
+  (setq neo-persist-show t)
+  (setq neo-smart-open t)
+  :bind ("C-c t" . neotree-toggle))
+
 (use-package omnisharp
   :ensure t
   :bind (("M-." . omnisharp-auto-complete)
@@ -418,3 +425,6 @@
 ;; ;(defun my-omnisharp-start (sln)
 ;; ;  (interactive "fOpen sln: ")
 ;; ;  (omnisharp-start-omnisharp-server (expand-file-name sln)))
+
+(use-package symbol-overlay
+  :bind ("M-i" . symbol-overlay-put))
