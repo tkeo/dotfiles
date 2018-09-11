@@ -5,7 +5,8 @@ function pg
     end
 end
 
-alias lh='ls -lh'
+alias ea='exa -a'
+alias el='exa -l'
 alias be='bundle exec'
 alias di='git diff'
 alias ds='git diff --staged'
