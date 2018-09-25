@@ -1,0 +1,11 @@
+*~
+*#
+.#*
+*.swp
+*.bak
+.svn
+.DS_Store
+.ruby-version
+.rbenv-gemsets
+vendor/bundle
+.envrc
