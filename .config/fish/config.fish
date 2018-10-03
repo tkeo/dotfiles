@@ -24,6 +24,7 @@ export BAT_THEME=zenburn
 
 set -gx PATH /usr/local/bin /usr/sbin $PATH
 set -gx PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+set -gx PATH /usr/local/share/git-core/contrib/diff-highlight $PATH
 set -gx MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
 if which rbenv > /dev/null
