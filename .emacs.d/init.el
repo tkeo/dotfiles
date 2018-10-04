@@ -299,8 +299,10 @@
 (use-package projectile
   :ensure t
   :diminish
+  :bind (:map projectile-mode-map
+	      ("C-c p" . projectile-command-map))
   :config
-  (projectile-global-mode))
+  (projectile-mode +1))
 
 (use-package projectile-rails
   :ensure t
