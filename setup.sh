@@ -2,6 +2,7 @@
 
 mkdir -pv ~/.config/fish/functions
 mkdir -pv ~/.config/git
+mkdir -pv ~/.config/peco
 mkdir -pv ~/.emacs.d
 
 git ls-files | egrep '^\.' | while read file; do
