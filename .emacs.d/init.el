@@ -40,6 +40,7 @@
 
 (use-package el-get
   :ensure t)
+(add-to-list 'load-path "~/.emacs.d/el-get")
 
 (use-package ag
   :ensure t
