@@ -89,6 +89,14 @@
 (use-package diminish
   :ensure t)
 
+(use-package dumb-jump
+  :ensure t
+  :bind (("C-c j g" . dumb-jump-go)
+	 ("C-c j b" . dumb-jump-back)
+	 ("C-c j p" . dumb-jump-go-prompt)
+	 ("C-c j q" . dumb-jump-quick-look))
+  :config (setq dumb-jump-selector 'helm))
+
 (use-package elscreen
   :ensure t
   :init
