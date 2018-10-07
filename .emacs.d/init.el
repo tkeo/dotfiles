@@ -270,6 +270,7 @@
 	 ("C-e" . mwim-end-of-code-or-line)))
 
 (use-package neotree
+  :ensure t
   :init
   (setq neo-theme 'ascii)
   (setq neo-persist-show t)
@@ -399,6 +400,10 @@
 (use-package swap-buffers
   :ensure t)
 
+(use-package symbol-overlay
+  :ensure t
+  :bind ("M-i" . symbol-overlay-put))
+
 (use-package terraform-mode
   :ensure t)
 
@@ -436,6 +441,3 @@
 ;; ;(defun my-omnisharp-start (sln)
 ;; ;  (interactive "fOpen sln: ")
 ;; ;  (omnisharp-start-omnisharp-server (expand-file-name sln)))
-
-(use-package symbol-overlay
-  :bind ("M-i" . symbol-overlay-put))
