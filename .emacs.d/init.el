@@ -42,13 +42,6 @@
   :ensure t)
 (add-to-list 'load-path "~/.emacs.d/el-get")
 
-(use-package ag
-  :ensure t
-  :defer t
-  :init
-  (setq ag-highlight-search t)
-  (setq ag-reuse-window 't))
-
 (use-package anzu
   :ensure t
   :defer t
@@ -324,6 +317,11 @@
 
 (use-package recentf-ext
   :ensure t)
+
+(use-package rg
+  :ensure t
+  :config
+  (rg-enable-default-bindings))
 
 (use-package robe
   :ensure t
