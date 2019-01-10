@@ -11,6 +11,7 @@ alias be='bundle exec'
 alias di='git diff'
 alias ds='git diff --staged'
 alias st='git status'
+alias rrf='rake routes | fzf-tmux'
 alias rrp='rake routes | peco'
 alias pgrep='pgrep -L'
 
