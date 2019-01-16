@@ -83,6 +83,10 @@
 (use-package diminish
   :ensure t)
 
+(use-package dockerfile-mode
+  :ensure t
+  :mode (("Dockerfile\\'" . dockerfile-mode)))
+
 (use-package dumb-jump
   :ensure t
   :bind (("C-c j g" . dumb-jump-go)
