@@ -418,7 +418,8 @@
 (use-package web-mode
   :ensure t
   :no-require t
-  :mode (("\\.html?\\'" . web-mode)))
+  :mode (("\\.html?\\'" . web-mode)
+	 ("\\.erb\\'" . web-mode)))
 
 (use-package which-key
   :ensure t
