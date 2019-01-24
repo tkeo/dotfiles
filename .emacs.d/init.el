@@ -167,7 +167,7 @@
   (custom-set-variables
    '(helm-ag-base-command "rg --no-heading --vimgrep")
    '(helm-ag-insert-at-point 'symbol))
-  :bind ("C-c s" . helm-ag-project-root))
+  :bind ("C-c a" . helm-ag-project-root))
 
 (use-package helm-ghq
   :ensure t
