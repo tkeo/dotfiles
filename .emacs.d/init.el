@@ -294,7 +294,7 @@
 		      :background "#0000ff"
 		      :box nil)
   (set-face-attribute 'powerline-active1 nil
-		      :foreground "#000"
+		      :foreground "#fff"
 		      :background "#0066ff"
 		      :inherit 'mode-line)
   (set-face-attribute 'powerline-active2 nil
