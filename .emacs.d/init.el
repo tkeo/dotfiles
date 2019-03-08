@@ -327,6 +327,9 @@
   :config
   (rg-enable-default-bindings))
 
+(use-package ripgrep
+  :ensure t)
+
 (use-package robe
   :ensure t
   :diminish
