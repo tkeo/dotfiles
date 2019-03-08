@@ -150,6 +150,8 @@
 	 ("C-x C-r" . helm-recentf)
 	 ("C-x b" . helm-buffers-list)
 	 ("M-m" . helm-imenu)
+	 ("M-;" . helm-mini)
+	 ("M-y" . helm-show-kill-ring)
 	 :map helm-map
 	 ("C-h" . delete-backward-char)
 	 :map helm-find-files-map
@@ -157,6 +159,12 @@
 	 ("TAB" . helm-execute-persistent-action)
 	 :map helm-read-file-map
 	 ("TAB" . helm-execute-persistent-action))
+  :init
+  (custom-set-variables
+   '(helm-buffer-max-length 50)
+   '(helm-mini-default-sources '(helm-source-buffers-list
+                                 helm-source-ls-git
+                                 helm-source-recentf)))
   :config
   (helm-mode 1))
 
@@ -188,6 +196,9 @@
 	      ("C-c <" . helm-gtags-previous-history)
 	      ("C-c >" . helm-gtags-next-history)
 	      ("M-," . helm-gtags-pop-stack)))
+
+(use-package helm-ls-git
+  :ensure t)
 
 (use-package helm-migemo
   :ensure t
