@@ -14,6 +14,7 @@
 	attributesfile = ~/.gitattributes_global
 	precomposeunicode = true
 	pager =
+	commentchar = ";"
 [diff]
 	renames = true
 	indentHeuristic = true
