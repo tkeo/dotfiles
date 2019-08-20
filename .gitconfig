@@ -12,7 +12,7 @@
 [core]
 	attributesfile = ~/.gitattributes_global
 	precomposeunicode = true
-	pager = bat
+	pager = bat -p -l txt
 	commentchar = ";"
 [diff]
 	renames = true
