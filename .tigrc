@@ -7,7 +7,6 @@ set pager-view = line-number:yes,interval=10 text
 
 bind generic g move-first-line
 bind generic G move-last-line
-bind main o !@git browse-remote %(commit)
-bind diff o !@git browse-remote %(commit)
-bind log o !@git browse-remote %(commit)
+bind main o !@hub browse -- commit/%(commit)
+bind diff o !@hub browse -- commit/%(commit)
 bind branch d !?git branch -d %(branch)
