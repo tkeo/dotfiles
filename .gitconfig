@@ -3,7 +3,6 @@
 	co = checkout
 	ci = commit -v
 	br = branch
-	bro = browse-remote
 	pu = pull -p
 	ph = push origin HEAD
 	di = diff -b
@@ -45,15 +44,3 @@
 	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-
-[browse-remote "github.com"]
-	# gem install git-browse-remote
-	top = https://{host}/{path}
-	ref = https://{host}/{path}/tree/{short_ref}
-	rev = https://{host}/{path}/commit/{commit}
-	file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
-[browse-remote "bitbucket.org"]
-	top = https://{host}/{path}
-	ref = https://{host}/{path}/src/{short_ref}
-	rev = https://{host}/{path}/commits/{commit}
-	file = "https://{host}/{path}/src/{short_rev}/{file}{line && \"#L%d\" % line}"
