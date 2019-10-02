@@ -1,1 +1,1 @@
--d mysql -T --skip-bundle
+-d mysql -T
