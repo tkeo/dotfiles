@@ -22,6 +22,7 @@ export PAGER=less
 export GEMSRC_USE_GHQ=1
 export GOPATH=$HOME/go
 export BAT_THEME=zenburn
+export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 set -gx PATH /usr/local/bin /usr/sbin $PATH
 set -gx PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
