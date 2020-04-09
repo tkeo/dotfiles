@@ -5,6 +5,20 @@ function pg
     end
 end
 
+function pr
+    gh pr list | fzf-tmux | cut -f1 | read line
+    if [ $line ]
+        gh pr view $line
+    end
+end
+
+function issue
+    gh issue list | fzf-tmux | cut -f1 | read line
+    if [ $line ]
+        gh issue view $line
+    end
+end
+
 alias ea='exa -a'
 alias el='exa -l'
 alias be='bundle exec'
