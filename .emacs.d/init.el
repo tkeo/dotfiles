@@ -295,7 +295,7 @@
 (use-package popwin
   :ensure t
   :config
-  (setq display-buffer-function 'popwin:display-buffer))
+  (popwin-mode 1))
 
 (use-package powerline
   :ensure t
